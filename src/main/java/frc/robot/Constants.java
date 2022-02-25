@@ -49,6 +49,9 @@ public class Constants {
 
     public static final int INVERSION = -1;
 
+    //Joystick
+    public static final int XBOX_CONTROLLER = 0;
+
 
 }
 

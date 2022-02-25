@@ -31,7 +31,7 @@ public class Intake extends SubsystemBase {
     
     private static Spark intake;
 
-    
+    static boolean toggle = false;
     /**
     *
     */
@@ -58,8 +58,15 @@ public class Intake extends SubsystemBase {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    public void toggleIntake() {
-        intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+    public static void toggleIntake() {
+        if (toggle == true) { //== true might be unnecessary
+            intake.set(0);
+        }
+        else {
+            intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+        }
+        
+        
 
     }
 
