@@ -56,7 +56,7 @@ public class TankDrive extends CommandBase {
     @Override
     public void execute() {
 
-        DriveTrain.differentialDrive.tankDrive(DriveTrain.setLeftMotors(), DriveTrain.setRightMotors()*Constants.INVERSION);
+        DriveTrain.differentialDrive.tankDrive(DriveTrain.setLeftMotors(), DriveTrain.setRightMotors());
     }
 
     // Called once the command ends or is interrupted.

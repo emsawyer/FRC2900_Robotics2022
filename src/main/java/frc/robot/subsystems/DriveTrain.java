@@ -94,7 +94,7 @@ public class DriveTrain extends SubsystemBase {
 
     public static double setLeftMotors() {
         
-        return Constants.DRIVE_MOTOR_PERCENTAGE*RobotContainer.getXboxController().getRightY();
+        return Constants.DRIVE_MOTOR_PERCENTAGE*RobotContainer.getXboxController().getLeftY();
     }
 
     public static double setRightMotors() {
