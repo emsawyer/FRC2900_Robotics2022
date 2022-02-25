@@ -31,21 +31,23 @@ public class Constants {
     * }
     */
 
+    // pwm values
     public static final int FRONT_LEFT_MOTOR_PORT = 0;
     public static final int BACK_LEFT_MOTOR_PORT = 1;
     public static final int FRONT_RIGHT_MOTOR_PORT = 2; 
     public static final int BACK_RIGHT_MOTOR_PORT = 3;
-    
+
     public static final int INTAKE_MOTOR_PORT = 4;
     public static final int LAUNCHER_MOTOR_PORT = 5;
     public static final int PULL_MOTOR_PORT = 6;
 
+    //motor percentages
     public static final double DRIVE_MOTOR_PERCENTAGE = .75;
     public static final double INTAKE_MOTOR_PERCENTAGE = .75;
     public static final double LAUNCHER_MOTOR_PERCENTAGE = .75;
     public static final double PULL_MOTOR_PERCENTAGE = .75;
 
-
+    public static final int INVERSION = -1;
 
 
 }

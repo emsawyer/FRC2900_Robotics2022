@@ -33,13 +33,13 @@ import edu.wpi.first.wpilibj.motorcontrol.Spark;
  */
 public class DriveTrain extends SubsystemBase {
 
-    private Spark frontLeft;
-    private Spark backLeft;
+    private static Spark frontLeft;
+    private static Spark backLeft;
     private static MotorControllerGroup leftMotor;
-    private Spark frontRight;
-    private Spark backRight;
+    private static Spark frontRight;
+    private static Spark backRight;
     private static MotorControllerGroup rightMotor;
-    private DifferentialDrive differentialDrive;
+    public static DifferentialDrive differentialDrive;
 
 
     public DriveTrain() {
@@ -52,7 +52,7 @@ public class DriveTrain extends SubsystemBase {
         addChild("Back Left",backLeft);
         backLeft.setInverted(false);
 
-        leftMotor = new MotorControllerGroup(frontLeft, backLeft  );
+        leftMotor = new MotorControllerGroup(frontLeft, backLeft);
         addChild("Left Motor",leftMotor);
         
 
@@ -68,7 +68,7 @@ public class DriveTrain extends SubsystemBase {
         addChild("Right Motor",rightMotor);
         
 
-        differentialDrive = new DifferentialDrive(leftMotor, frontLeft);
+        differentialDrive = new DifferentialDrive(leftMotor, rightMotor);
         addChild("Differential Drive",differentialDrive);
         differentialDrive.setSafetyEnabled(true);
         differentialDrive.setExpiration(0.1);
@@ -92,14 +92,14 @@ public class DriveTrain extends SubsystemBase {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    public void setLeftMotors(double leftY) {
+    public static double setLeftMotors() {
         
-        leftMotor.set(Constants.DRIVE_MOTOR_PERCENTAGE*leftY);
+        return Constants.DRIVE_MOTOR_PERCENTAGE*RobotContainer.getXboxController().getRightY();
     }
 
-    public void setRightMotors(double rightY) {
+    public static double setRightMotors() {
 
-        rightMotor.set(Constants.DRIVE_MOTOR_PERCENTAGE*rightY);
+        return Constants.DRIVE_MOTOR_PERCENTAGE*RobotContainer.getXboxController().getRightY();
     }
 
     public static void stop() {
@@ -107,12 +107,6 @@ public class DriveTrain extends SubsystemBase {
         leftMotor.set(0);
         rightMotor.set(0);
     }
-
-    public void drive() {
-        
-
-    }
-
 
 }
 
