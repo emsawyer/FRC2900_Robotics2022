@@ -52,6 +52,9 @@ public class Constants {
     //Joystick
     public static final int XBOX_CONTROLLER = 0;
 
+    //PID
+    public static final double kP = .1; //likely needs to be adjusted
+    public static final double kDriveTick2Feet = (1.0/128) * 6 * Math.PI * (1/12); //might not be right or needed
 
 }
 

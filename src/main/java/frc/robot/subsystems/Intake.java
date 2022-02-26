@@ -58,12 +58,13 @@ public class Intake extends SubsystemBase {
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-    public static void toggleIntake() {
+    public static void toggleIntake() { //toggle might be done automatically, so if there's a bug, try removing it
         if (toggle == true) { //== true might be unnecessary
             intake.set(0);
         }
         else {
             intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+            toggle = true;
         }
         
         

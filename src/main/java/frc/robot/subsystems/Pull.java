@@ -78,7 +78,7 @@ public XboxController xboxController;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    public void setPull() {
+    public static void setPull() {
         pull.set(Constants.PULL_MOTOR_PERCENTAGE);
 
     }
