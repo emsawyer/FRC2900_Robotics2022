@@ -62,8 +62,7 @@ public class Intake extends SubsystemBase {
 
         intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
 
-        
-
+    
     }
 
     public static void stop() {

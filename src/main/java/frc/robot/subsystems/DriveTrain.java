@@ -118,7 +118,7 @@ public class DriveTrain extends SubsystemBase {
         rightMotor.set(0);
     }
 
-    public static void move() {
+    public static void move(double time, double distance) {
 
 
     }
