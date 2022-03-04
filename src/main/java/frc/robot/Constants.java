@@ -57,10 +57,8 @@ public class Constants {
     public static final double kDriveTick2Feet = (1.0/128) * 6 * Math.PI * (1/12); //might not be right or needed
 
     //Autonomous
-    public static final int DISTANCE_TO_TRAVEL = -3; //set to change
     public static final int DRIVE_TIME = 4; 
     public static final double AUTONOMOUS_DRIVE_PERCENTAGE = -.25;
 
-        //github test
 }
 
