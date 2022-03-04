@@ -58,11 +58,11 @@ public class DriveTrain extends SubsystemBase {
 
         frontRight = new Spark(Constants.FRONT_RIGHT_MOTOR_PORT); //2
         addChild("Front Right",frontRight);
-        frontRight.setInverted(false);
+        frontRight.setInverted(true);
 
         backRight = new Spark(Constants.BACK_RIGHT_MOTOR_PORT); //3
         addChild("Back Right",backRight);
-        backRight.setInverted(false);
+        backRight.setInverted(true);
 
         rightMotor = new MotorControllerGroup(frontRight, backRight  );
         addChild("Right Motor",rightMotor);
