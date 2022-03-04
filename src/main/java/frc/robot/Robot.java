@@ -28,7 +28,6 @@ import edu.wpi.first.cscore.UsbCamera;
 */
 
 import edu.wpi.first.hal.HAL;
-import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
@@ -136,7 +135,6 @@ public class Robot extends TimedRobot {
     @Override
     public void autonomousInit() {
         m_autonomousCommand = m_robotContainer.getAutonomousCommand();
-        DriveTrain.getEncoder1().reset();
 
         // schedule the autonomous command (example)
         if (m_autonomousCommand != null) {
