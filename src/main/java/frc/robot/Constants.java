@@ -37,8 +37,8 @@ public class Constants {
     public static final int FRONT_RIGHT_MOTOR_PORT = 2; 
     public static final int BACK_RIGHT_MOTOR_PORT = 3;
 
-    public static final int INTAKE_MOTOR_PORT = 4;
-    public static final int LAUNCHER_MOTOR_PORT = 5;
+    public static final int INTAKE_MOTOR_PORT = 5;
+    public static final int LAUNCHER_MOTOR_PORT = 7;
     public static final int PULL_MOTOR_PORT = 6;
 
     //motor percentages
