@@ -118,8 +118,12 @@ public class DriveTrain extends SubsystemBase {
         rightMotor.set(0);
     }
 
-    public static void move(double time, double distance) {
-
+    public static void move(double time, double power) {
+        RobotContainer.m_timer.reset();
+        RobotContainer.m_timer.reset();
+        if (RobotContainer.m_timer.get() <= time) {
+            DriveTrain.differentialDrive.tankDrive(power, power);
+        }
 
     }
 

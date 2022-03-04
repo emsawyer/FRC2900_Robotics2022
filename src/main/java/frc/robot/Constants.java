@@ -32,9 +32,9 @@ public class Constants {
     */
 
     // pwm values
-    public static final int FRONT_LEFT_MOTOR_PORT = 0;
+    public static final int FRONT_LEFT_MOTOR_PORT = 2;
     public static final int BACK_LEFT_MOTOR_PORT = 1;
-    public static final int FRONT_RIGHT_MOTOR_PORT = 2; 
+    public static final int FRONT_RIGHT_MOTOR_PORT = 4; 
     public static final int BACK_RIGHT_MOTOR_PORT = 3;
 
     public static final int INTAKE_MOTOR_PORT = 5;
@@ -55,6 +55,12 @@ public class Constants {
     //PID
     public static final double kP = .1; //likely needs to be adjusted
     public static final double kDriveTick2Feet = (1.0/128) * 6 * Math.PI * (1/12); //might not be right or needed
+
+    //Autonomous
+    public static final int DISTANCE_TO_TRAVEL = -3; //set to change
+    public static final int DRIVE_TIME = 4; 
+    public static final double AUTONOMOUS_DRIVE_PERCENTAGE = -.25;
+
 
 }
 
