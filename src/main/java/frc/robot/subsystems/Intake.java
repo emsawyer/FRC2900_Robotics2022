@@ -44,6 +44,20 @@ public class Intake extends SubsystemBase {
     public void periodic() {
         // This method will be called once per scheduler run
 
+        //if intake still doesn't work
+        //will need to set some activation method
+        /*
+            if (toggle == false) {
+                intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+                toggle = true;
+            }
+            else {
+                intake.set(0);
+                toggle = false;
+            }
+
+        */
+
     }
 
     @Override
@@ -60,7 +74,7 @@ public class Intake extends SubsystemBase {
     // here. Call these from Commands.
     public static void toggleIntake() {
 
-            intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+        intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
 
 
     
