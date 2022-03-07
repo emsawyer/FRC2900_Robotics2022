@@ -31,13 +31,19 @@ public class Intake extends SubsystemBase {
     
     private static PWMSparkMax intake;
 
-    static boolean toggle = false;
+    static boolean toggle;
+
+    private static double intake_percent = Constants.INTAKE_MOTOR_PERCENTAGE;
+
     /**
     *
     */
     public Intake() {
         
         intake = new PWMSparkMax(Constants.INTAKE_MOTOR_PORT);
+        toggle = false;
+        
+
     }
 
     @Override
@@ -73,10 +79,14 @@ public class Intake extends SubsystemBase {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     public static void toggleIntake() {
-
-        intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
-
-
+        if (!toggle) {
+            intake.set(intake_percent);
+            toggle = true;
+        }
+        else {
+            intake.set(0);
+            toggle = false;
+        }
     
     }
 

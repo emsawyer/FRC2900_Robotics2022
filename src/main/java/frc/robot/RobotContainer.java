@@ -95,7 +95,7 @@ public class RobotContainer {
 
     //x - intake
     final JoystickButton intake = new JoystickButton(xboxController, XboxController.Button.kX.value);        
-    intake.toggleWhenPressed(new ToggleIntake() ,true);
+    intake.whenPressed(new ToggleIntake());
     SmartDashboard.putData("Intake",new ToggleIntake() );
 
     //y - pull
@@ -103,7 +103,7 @@ public class RobotContainer {
     pull.toggleWhenPressed(new TogglePull() ,true);
     SmartDashboard.putData("Pull",new TogglePull() );
 
-    //doesn't actually do anything
+    //doesn't actually do anything i think
     final JoystickButton leftStick = new JoystickButton(xboxController, XboxController.Button.kLeftStick.value);        
     leftStick.whileHeld(new TankDrive(m_driveTrain) ,true);
     SmartDashboard.putData("LeftStick",new DriveCommand() );

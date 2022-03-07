@@ -33,8 +33,8 @@ import edu.wpi.first.wpilibj.motorcontrol.Spark;
  */
 public class DriveTrain extends SubsystemBase {
 
-    private static Spark frontLeft;
-    private static Spark backLeft;
+    private Spark frontLeft;
+    private Spark backLeft;
     private static MotorControllerGroup leftMotor;
     private static Spark frontRight;
     private static Spark backRight;
@@ -48,7 +48,7 @@ public class DriveTrain extends SubsystemBase {
         addChild("Front Left",frontLeft);
         frontLeft.setInverted(false);
 
-        backLeft = new Spark(Constants.BACK_LEFT_MOTOR_PORT); //1
+        backLeft = new Spark(Constants.BACK_LEFT_MOTOR_PORT);
         addChild("Back Left",backLeft);
         backLeft.setInverted(false);
 
@@ -56,11 +56,11 @@ public class DriveTrain extends SubsystemBase {
         addChild("Left Motor",leftMotor);
         
 
-        frontRight = new Spark(Constants.FRONT_RIGHT_MOTOR_PORT); //2
+        frontRight = new Spark(Constants.FRONT_RIGHT_MOTOR_PORT);
         addChild("Front Right",frontRight);
         frontRight.setInverted(true);
 
-        backRight = new Spark(Constants.BACK_RIGHT_MOTOR_PORT); //3
+        backRight = new Spark(Constants.BACK_RIGHT_MOTOR_PORT);
         addChild("Back Right",backRight);
         backRight.setInverted(true);
 

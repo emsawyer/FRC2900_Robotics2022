@@ -46,12 +46,13 @@ public class TogglePull extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        Pull.setPull();
+
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        Pull.setPull();
     }
 
     // Called once the command ends or is interrupted.
