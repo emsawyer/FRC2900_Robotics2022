@@ -32,24 +32,17 @@ public class Intake extends SubsystemBase {
     
     private static PWMSparkMax intake;
 
-<<<<<<< HEAD
     public static double intake_percent = Constants.INTAKE_MOTOR_PERCENTAGE;
 
 
     
-=======
-    static boolean toggle;
-
-    private static double intake_percent = Constants.INTAKE_MOTOR_PERCENTAGE;
-
->>>>>>> e44c83dcaacd3f5e04f4b1fe7f2217dcec16c6e0
     /**
     *
     */
     public Intake() {
         
         intake = new PWMSparkMax(Constants.INTAKE_MOTOR_PORT);
-        toggle = false;
+       
         
 
     }

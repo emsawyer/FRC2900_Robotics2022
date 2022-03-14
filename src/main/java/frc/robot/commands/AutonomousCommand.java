@@ -55,7 +55,7 @@ public class AutonomousCommand extends CommandBase {
     @Override
     public void execute() {
 
-        DriveTrain.move(Constants.DRIVE_TIME, Constants.AUTONOMOUS_DRIVE_PERCENTAGE);
+        //DriveTrain.move(Constants.DRIVE_TIME, Constants.AUTONOMOUS_DRIVE_PERCENTAGE);
         
     }
 

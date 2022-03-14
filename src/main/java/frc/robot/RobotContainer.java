@@ -57,7 +57,7 @@ public class RobotContainer {
     SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
     SmartDashboard.putData("Drive Command", new DriveCommand());
     SmartDashboard.putData("Toggle Intake", new ToggleIntake());
-    SmartDashboard.putData("Activate Launcher", new ActivateLauncher());
+    //SmartDashboard.putData("Activate Launcher", new ActivateLauncher());
     SmartDashboard.putData("Toggle Pull", new TogglePull());
    // SmartDashboard.putData("Tank Drive", new TankDrive(m_driveTrain,));
 
