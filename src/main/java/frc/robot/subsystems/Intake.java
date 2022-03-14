@@ -32,21 +32,45 @@ public class Intake extends SubsystemBase {
     
     private static PWMSparkMax intake;
 
+<<<<<<< HEAD
     public static double intake_percent = Constants.INTAKE_MOTOR_PERCENTAGE;
 
 
     
+=======
+    static boolean toggle;
+
+    private static double intake_percent = Constants.INTAKE_MOTOR_PERCENTAGE;
+
+>>>>>>> e44c83dcaacd3f5e04f4b1fe7f2217dcec16c6e0
     /**
     *
     */
     public Intake() {
         
         intake = new PWMSparkMax(Constants.INTAKE_MOTOR_PORT);
+        toggle = false;
+        
+
     }
 
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
+
+        //if intake still doesn't work
+        //will need to set some activation method
+        /*
+            if (toggle == false) {
+                intake.set(Constants.INTAKE_MOTOR_PERCENTAGE);
+                toggle = true;
+            }
+            else {
+                intake.set(0);
+                toggle = false;
+            }
+
+        */
 
     }
 
