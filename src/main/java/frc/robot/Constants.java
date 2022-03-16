@@ -43,7 +43,7 @@ public class Constants {
 
     //motor percentages
     public static final double DRIVE_MOTOR_PERCENTAGE = .75;
-    public static final double INTAKE_MOTOR_PERCENTAGE = .75;
+    public static final double INTAKE_MOTOR_PERCENTAGE = -.50;
     public static final double LAUNCHER_MOTOR_PERCENTAGE = .75;
     public static final double PULL_MOTOR_PERCENTAGE = .75;
 
