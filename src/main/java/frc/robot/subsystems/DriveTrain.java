@@ -3,7 +3,7 @@ package frc.robot.subsystems;
 import frc.robot.Constants;
 import frc.robot.RobotContainer;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.motorcontrol.Spark;
@@ -19,6 +19,8 @@ public class DriveTrain extends SubsystemBase {
     private  static MotorControllerGroup rightMotor;
     public static DifferentialDrive differentialDrive;
     public static double drive_percent = Constants.DRIVE_MOTOR_PERCENTAGE;
+
+    static Timer m_timer;
 
     public DriveTrain() {
 
@@ -84,13 +86,17 @@ public class DriveTrain extends SubsystemBase {
     }
 
     public static void move(double time, double power) {
-        RobotContainer.m_timer.reset();
-        RobotContainer.m_timer.start();
-        while (RobotContainer.m_timer.get() <= time) {
+        System.out.println("beginning");
+
+
+        if (time > Timer.getFPGATimestamp()) {
+            System.out.println("motor on");
             DriveTrain.differentialDrive.tankDrive(power, power);
         }
-        
-        DriveTrain.differentialDrive.tankDrive(0, 0);
+        else {
+            DriveTrain.differentialDrive.tankDrive(0, 0);
+            System.out.println("done");
+        }
 
     }
     

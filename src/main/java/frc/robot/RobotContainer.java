@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import edu.wpi.first.wpilibj2.command.Command;
+
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -60,15 +61,14 @@ public class RobotContainer {
     configureButtonBindings();
 
     // Configure default commands
-      m_driveTrain.setDefaultCommand(new TankDrive(m_driveTrain, ()-> xboxController.getLeftY(), ()-> xboxController.getRightY()) );
+    m_driveTrain.setDefaultCommand(new TankDrive(m_driveTrain, ()-> xboxController.getLeftY(), ()-> xboxController.getRightY()) );
     //m_launcher.setDefaultCommand(new ActivateLauncher() );
 
 
     // Configure autonomous sendable chooser
-    /*
+    
     m_chooser.addOption("Autonomous Command", new AutonomousCommand());
-    m_chooser.addOption("Drive Command", new DriveCommand());
-    */
+
     m_chooser.setDefaultOption("Autonomous Command", new AutonomousCommand());
 
 
@@ -91,16 +91,16 @@ public class RobotContainer {
     /*
     final JoystickButton rightBumper = new JoystickButton(xboxController, XboxController.Button.kRightBumper.value);        
     rightBumper.whenHeld(new ActivateLauncher(m_launcher) ,true);
-        //SmartDashboard.putData("Launcher",new ActivateLauncher() );
+        SmartDashboard.putData("Launcher",new ActivateLauncher(m_launcher) );
     */
 
     final JoystickButton intake = new JoystickButton(xboxController, XboxController.Button.kX.value);        
     intake.toggleWhenPressed(new ToggleIntake() ,true);
-        //SmartDashboard.putData("Intake",new ToggleIntake() );
+        SmartDashboard.putData("Intake",new ToggleIntake() );
     
     final JoystickButton pull = new JoystickButton(xboxController, XboxController.Button.kY.value);        
     pull.toggleWhenPressed(new TogglePull() ,true);
-    //SmartDashboard.putData("Pull",new TogglePull() );
+      SmartDashboard.putData("Pull",new TogglePull() );
 
   }
 
