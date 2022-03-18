@@ -8,11 +8,13 @@ public class AutonomousCommand extends CommandBase {
  
     public double setpoint;
 
-    public AutonomousCommand() {
+    private final DriveTrain m_driveTrainSubsystem;
 
-        // m_subsystem = subsystem;
-        // addRequirements(m_subsystem);    
+    public AutonomousCommand(DriveTrain subsystem) {
 
+   
+        this.m_driveTrainSubsystem = subsystem;
+        addRequirements(m_driveTrainSubsystem);    
 
     }
 
