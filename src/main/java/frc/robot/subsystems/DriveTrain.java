@@ -96,7 +96,7 @@ public class DriveTrain extends SubsystemBase {
 
         }
         else {
-            DriveTrain.differentialDrive.tankDrive(0, 0);
+            DriveTrain.differentialDrive.stopMotor();
             System.out.println("done");
         }
 
