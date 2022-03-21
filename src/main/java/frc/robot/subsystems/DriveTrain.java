@@ -93,6 +93,10 @@ public class DriveTrain extends SubsystemBase {
             System.out.println(power);
             leftMotor.set(-.4);
             rightMotor.set(.4);
+            /*
+            leftMotor.set(-power);
+            rightMotor.set(power);
+            */
 
         }
         else {
