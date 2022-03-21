@@ -10,13 +10,18 @@ import edu.wpi.first.wpilibj.motorcontrol.Spark;
 public class Launcher extends SubsystemBase {
 
     private static Spark launcher;
-
+    private static double launcher_percent;
+    private static double launcher_percent2;
+    private static double launcher_percent3;
 
     public Launcher() {
 
         launcher = new Spark(Constants.LAUNCHER_MOTOR_PORT);
         addChild("launcher",launcher);
         launcher.setInverted(false);
+        launcher_percent = Constants.LAUNCHER_MOTOR_PERCENTAGE;
+        launcher_percent2 = Constants.LAUNCHER_MOTOR_PERCENTAGE2;
+        launcher_percent3 = Constants.LAUNCHER_MOTOR_PERCENTAGE3;
 
     }
 
@@ -36,8 +41,24 @@ public class Launcher extends SubsystemBase {
     // here. Call these from Commands.
 
     public static void setLauncher() {
-        launcher.set(Constants.LAUNCHER_MOTOR_PERCENTAGE);
+        launcher.set(launcher_percent);
 
     }
+
+    public static void setLauncher2() {
+        launcher.set(launcher_percent2);
+
+    }
+
+    public static void setLauncher3() {
+        launcher.set(launcher_percent3);
+
+    }
+
+    public static void setLauncherPercent() {
+
+    }
+
+
 }
 

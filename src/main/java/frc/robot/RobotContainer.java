@@ -88,16 +88,24 @@ public class RobotContainer {
 
 // Create some buttons
     /*
-    final JoystickButton rightBumper = new JoystickButton(xboxController, XboxController.Button.kRightBumper.value);        
-    rightBumper.whenHeld(new ActivateLauncher(m_launcher) ,true);
+    final JoystickButton Launcher1 = new JoystickButton(xboxController, XboxController.Button.kX.value);        
+    Launcher1.whenHeld(new ActivateLauncher(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new ActivateLauncher(m_launcher) );
+
+    final JoystickButton Launcher2 = new JoystickButton(xboxController, XboxController.Button.kY.value);        
+    Launcher2.whenHeld(new Launcher2(m_launcher) ,true);
+        SmartDashboard.putData("Launcher",new Launcher2(m_launcher) );
+
+    final JoystickButton Launcher3 = new JoystickButton(xboxController, XboxController.Button.kB.value);        
+    Launcher3.whenHeld(new Launcher3(m_launcher) ,true);
+        SmartDashboard.putData("Launcher",new Launcher3(m_launcher) );         
     */
 
-    final JoystickButton intake = new JoystickButton(xboxController, XboxController.Button.kX.value);        
+    final JoystickButton intake = new JoystickButton(xboxController, XboxController.Button.kLeftBumper.value);        
     intake.toggleWhenPressed(new ToggleIntake() ,true);
         SmartDashboard.putData("Intake",new ToggleIntake() );
     
-    final JoystickButton pull = new JoystickButton(xboxController, XboxController.Button.kY.value);        
+    final JoystickButton pull = new JoystickButton(xboxController, XboxController.Button.kRightBumper.value);        
     pull.toggleWhenPressed(new TogglePull() ,true);
       SmartDashboard.putData("Pull",new TogglePull() );
 
