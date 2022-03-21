@@ -10,11 +10,17 @@ public class AutonomousCommand extends CommandBase {
 
     private final DriveTrain m_driveTrainSubsystem;
 
+    private final double auto_power;
+    private final double auto_time;
+
     public AutonomousCommand(DriveTrain subsystem) {
 
    
         this.m_driveTrainSubsystem = subsystem;
         addRequirements(m_driveTrainSubsystem);    
+
+        auto_power = Constants.AUTONOMOUS_DRIVE_PERCENTAGE;
+        auto_time = Constants.AUTO_TIME;
 
     }
 
@@ -27,7 +33,7 @@ public class AutonomousCommand extends CommandBase {
     @Override
     public void execute() {
 
-        DriveTrain.move(Constants.DRIVE_TIME, Constants.AUTONOMOUS_DRIVE_PERCENTAGE);
+        DriveTrain.move(auto_time, auto_power);
         
     }
 

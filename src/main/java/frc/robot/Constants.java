@@ -41,7 +41,7 @@ public class Constants {
     public static final double kDriveTick2Feet = (1.0/128) * 6 * Math.PI * (1/12); //might not be right or needed
 
     //Autonomous
-    public static final double DRIVE_TIME = 4.0; 
+    public static final double AUTO_TIME = 4.0; 
     public static final double AUTONOMOUS_DRIVE_PERCENTAGE = -.25;
 
 }

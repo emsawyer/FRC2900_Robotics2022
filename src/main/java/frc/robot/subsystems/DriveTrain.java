@@ -51,6 +51,8 @@ public class DriveTrain extends SubsystemBase {
         differentialDrive.setExpiration(0.1);
         differentialDrive.setMaxOutput(1.0);
 
+        m_timer.reset();
+        m_timer.start();
     }
 
     @Override
@@ -88,7 +90,7 @@ public class DriveTrain extends SubsystemBase {
         System.out.println("beginning");
 
 
-        if (time > Timer.getFPGATimestamp()) {
+        if (time > m_timer.get()) {
             System.out.println("motor on");
             DriveTrain.differentialDrive.tankDrive(power, power);
         }
