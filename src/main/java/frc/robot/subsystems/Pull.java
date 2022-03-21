@@ -8,8 +8,12 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public class Pull extends SubsystemBase {
 
     private static PWMSparkMax pull;
+    
+    private static double pull_percent = Constants.PULL_MOTOR_PERCENTAGE;
 
     public Pull() {
+
+        pull = new PWMSparkMax(Constants.PULL_MOTOR_PORT);
 
     }
 
@@ -29,7 +33,7 @@ public class Pull extends SubsystemBase {
     // here. Call these from Commands.
 
     public static void setPull() {
-        pull.set(Constants.PULL_MOTOR_PERCENTAGE);
+        pull.set(pull_percent);
 
     }
 

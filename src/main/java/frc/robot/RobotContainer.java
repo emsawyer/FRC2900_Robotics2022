@@ -89,15 +89,15 @@ public class RobotContainer {
 // Create some buttons
     /*
     final JoystickButton Launcher1 = new JoystickButton(xboxController, XboxController.Button.kX.value);        
-    Launcher1.whenHeld(new ActivateLauncher(m_launcher) ,true);
+    Launcher1.toggleWhenPressed(new ActivateLauncher(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new ActivateLauncher(m_launcher) );
 
     final JoystickButton Launcher2 = new JoystickButton(xboxController, XboxController.Button.kY.value);        
-    Launcher2.whenHeld(new Launcher2(m_launcher) ,true);
+    Launcher2.toggleWhenPressed(new Launcher2(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new Launcher2(m_launcher) );
 
     final JoystickButton Launcher3 = new JoystickButton(xboxController, XboxController.Button.kB.value);        
-    Launcher3.whenHeld(new Launcher3(m_launcher) ,true);
+    Launcher3.toggleWhenPressed(new Launcher3(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new Launcher3(m_launcher) );         
     */
 

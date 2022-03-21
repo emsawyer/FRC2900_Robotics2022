@@ -19,7 +19,7 @@ public class DriveTrain extends SubsystemBase {
     public static DifferentialDrive differentialDrive;
     public static double drive_percent = Constants.DRIVE_MOTOR_PERCENTAGE;
 
-    static Timer m_timer;
+    public static Timer m_timer = new Timer();
 
     public DriveTrain() {
 
@@ -51,8 +51,6 @@ public class DriveTrain extends SubsystemBase {
         differentialDrive.setExpiration(0.1);
         differentialDrive.setMaxOutput(1.0);
 
-        m_timer.reset();
-        m_timer.start();
     }
 
     @Override
@@ -77,7 +75,7 @@ public class DriveTrain extends SubsystemBase {
 
     public static double setRightMotors(double rstickspeed) {
 
-        return drive_percent*rstickspeed*-1;
+        return drive_percent * rstickspeed*-1;
     }
 
     public void stop() {
@@ -87,12 +85,15 @@ public class DriveTrain extends SubsystemBase {
     }
 
     public static void move(double time, double power) {
-        System.out.println("beginning");
-
+        System.out.println(m_timer.get());
 
         if (time > m_timer.get()) {
+         
             System.out.println("motor on");
-            DriveTrain.differentialDrive.tankDrive(power, power);
+            System.out.println(power);
+            leftMotor.set(-.4);
+            rightMotor.set(.4);
+
         }
         else {
             DriveTrain.differentialDrive.tankDrive(0, 0);

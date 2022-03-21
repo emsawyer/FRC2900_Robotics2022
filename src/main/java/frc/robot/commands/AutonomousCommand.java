@@ -10,7 +10,7 @@ public class AutonomousCommand extends CommandBase {
 
     private final DriveTrain m_driveTrainSubsystem;
 
-    private final double auto_power;
+    private static double auto_power;
     private final double auto_time;
 
     public AutonomousCommand(DriveTrain subsystem) {
@@ -27,6 +27,10 @@ public class AutonomousCommand extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        
+        DriveTrain.m_timer.reset();
+        DriveTrain.m_timer.start();
+
     }
 
     // Called every time the scheduler runs while the command is scheduled.

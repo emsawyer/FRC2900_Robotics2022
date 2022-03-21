@@ -41,7 +41,6 @@ public class Intake extends SubsystemBase {
     // here. Call these from Commands.
     public static void toggleIntake() {
         intake.set(intake_percent);
-        System.out.println(intake.get());
 
     }
 
