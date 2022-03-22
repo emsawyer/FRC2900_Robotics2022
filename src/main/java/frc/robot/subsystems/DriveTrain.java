@@ -91,12 +91,11 @@ public class DriveTrain extends SubsystemBase {
          
             System.out.println("motor on");
             System.out.println(power);
-            leftMotor.set(-.4);
-            rightMotor.set(.4);
-            /*
-            leftMotor.set(-power);
-            rightMotor.set(power);
-            */
+
+
+            leftMotor.set(-Constants.AUTONOMOUS_DRIVE_PERCENTAGE);
+            rightMotor.set(Constants.AUTONOMOUS_DRIVE_PERCENTAGE);
+            
 
         }
         else {
@@ -106,7 +105,9 @@ public class DriveTrain extends SubsystemBase {
         }
 
         if (finishedMove == true) {
+            System.out.println("start shoot");
             autoShoot();
+            
 
         }
     }
