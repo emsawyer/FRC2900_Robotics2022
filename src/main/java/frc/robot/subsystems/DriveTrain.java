@@ -84,7 +84,7 @@ public class DriveTrain extends SubsystemBase {
         rightMotor.set(0);
     }
 
-    public static void move(double time, double power) {
+    public static void move(double time, double power, boolean finishedMove) {
         System.out.println(m_timer.get());
 
         if (time > m_timer.get()) {
@@ -98,6 +98,27 @@ public class DriveTrain extends SubsystemBase {
         else {
             DriveTrain.differentialDrive.stopMotor();
             System.out.println("done");
+            finishedMove = true;
+        }
+
+        if (finishedMove == true) {
+            autoShoot();
+
+        }
+    }
+
+    public static void autoShoot() {
+        if (m_timer.get() < Constants.SHOOT_TIME) {
+            System.out.println(m_timer.get());
+            Intake.toggleIntake();
+            Pull.setPull();
+            //Launcher.setLauncher();
+        }
+       
+        else {
+            Intake.stop();
+            Pull.stop();
+            //Launcher.stop();
         }
 
     }

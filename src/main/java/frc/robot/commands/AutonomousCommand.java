@@ -29,7 +29,7 @@ public class AutonomousCommand extends CommandBase {
     public void initialize() {
         
         DriveTrain.m_timer.reset();
-        DriveTrain.m_timer.start();
+        DriveTrain.m_timer.start();    
 
     }
 
@@ -37,7 +37,7 @@ public class AutonomousCommand extends CommandBase {
     @Override
     public void execute() {
 
-        DriveTrain.move(auto_time, auto_power);
+        DriveTrain.move(auto_time, auto_power, false);
         
     }
 

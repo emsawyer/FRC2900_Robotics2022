@@ -59,6 +59,10 @@ public class Launcher extends SubsystemBase {
 
     }
 
+    public static void stop() {
+        launcher.set(0);
+
+    }
 
 }
 
