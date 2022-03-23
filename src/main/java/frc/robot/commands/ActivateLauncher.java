@@ -5,10 +5,12 @@ import frc.robot.subsystems.Launcher;
 
 public class ActivateLauncher extends CommandBase {
 
+    
     private final Launcher m_launcher;
 
     public ActivateLauncher(Launcher launcher) {
 
+   
         this.m_launcher = launcher;
         addRequirements(m_launcher);
    
@@ -17,17 +19,20 @@ public class ActivateLauncher extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        Launcher.setLauncher();
+        System.out.println("Launcher started");
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        Launcher.setLauncher();
+
     }
 
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
+        Launcher.stop();
     }
 
     // Returns true when the command should end.

@@ -53,9 +53,9 @@ public class RobotContainer {
     SmartDashboard.putData("Toggle Pull", new TogglePull());
     SmartDashboard.putData("Tank Drive", new TankDrive(m_driveTrain, ()-> xboxController.getLeftY(), ()-> xboxController.getRightY()));
 
-    //SmartDashboard.putData("Activate Launcher", new ActivateLauncher(m_launcher));
-    //SmartDashboard.putData("Launcher2", new Launcher2(m_launcher));
-    //SmartDashboard.putData("Launcher3", new Launcher3(m_launcher));
+    SmartDashboard.putData("Activate Launcher", new ActivateLauncher(m_launcher));
+    SmartDashboard.putData("Launcher2", new Launcher2(m_launcher));
+    SmartDashboard.putData("Launcher3", new Launcher3(m_launcher));
 
     // Configure the button bindings
     configureButtonBindings();
@@ -87,7 +87,7 @@ public class RobotContainer {
   private void configureButtonBindings() {
 
 // Create some buttons
-    /*
+    
     final JoystickButton Launcher1 = new JoystickButton(xboxController, XboxController.Button.kX.value);        
     Launcher1.toggleWhenPressed(new ActivateLauncher(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new ActivateLauncher(m_launcher) );
@@ -99,7 +99,7 @@ public class RobotContainer {
     final JoystickButton Launcher3 = new JoystickButton(xboxController, XboxController.Button.kB.value);        
     Launcher3.toggleWhenPressed(new Launcher3(m_launcher) ,true);
         SmartDashboard.putData("Launcher",new Launcher3(m_launcher) );         
-    */
+    
 
     final JoystickButton intake = new JoystickButton(xboxController, XboxController.Button.kLeftBumper.value);        
     intake.toggleWhenPressed(new ToggleIntake() ,true);

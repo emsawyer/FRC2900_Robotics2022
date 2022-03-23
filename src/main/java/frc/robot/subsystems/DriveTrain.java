@@ -117,13 +117,13 @@ public class DriveTrain extends SubsystemBase {
             System.out.println(m_timer.get());
             Intake.toggleIntake();
             Pull.setPull();
-            //Launcher.setLauncher();
+            Launcher.setLauncher();
         }
        
         else {
             Intake.stop();
             Pull.stop();
-            //Launcher.stop();
+            Launcher.stop();
         }
 
     }
