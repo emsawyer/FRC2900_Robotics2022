@@ -7,7 +7,7 @@ public class ActivateLauncher extends CommandBase {
 
     
     private final Launcher m_launcher;
-    boolean launcherToggle;
+    public static boolean launcherToggle;
 
     public ActivateLauncher(Launcher launcher) {
 

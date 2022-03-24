@@ -5,7 +5,7 @@ import frc.robot.subsystems.Pull;
 
 public class TogglePull extends CommandBase {
 
-    boolean pullToggle;
+    public static boolean pullToggle;
 
     public TogglePull() {
 

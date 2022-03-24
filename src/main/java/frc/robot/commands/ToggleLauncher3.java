@@ -3,13 +3,12 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.Launcher;
 
 
-public class Launcher2 extends CommandBase {
+public class ToggleLauncher3 extends CommandBase {
 
     private final Launcher m_launcher;
-    boolean launcherToggle;
+    public static boolean launcherToggle;
 
-    
-    public Launcher2(Launcher launcher) {
+    public ToggleLauncher3(Launcher launcher) {
 
         this.m_launcher = launcher;
         addRequirements(m_launcher);
@@ -19,7 +18,7 @@ public class Launcher2 extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
-        Launcher.setLauncher2();
+        Launcher.setLauncher3();
         launcherToggle = true;
     }
 

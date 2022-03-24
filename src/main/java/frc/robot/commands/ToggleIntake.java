@@ -4,7 +4,7 @@ import frc.robot.subsystems.Intake;
 
 public class ToggleIntake extends CommandBase {
 
-    boolean intakeToggle;
+    public static boolean intakeToggle;
 
     public ToggleIntake() {
 
