@@ -5,6 +5,8 @@ import frc.robot.subsystems.Pull;
 
 public class TogglePull extends CommandBase {
 
+    boolean pullToggle;
+
     public TogglePull() {
 
         // m_subsystem = subsystem;
@@ -16,7 +18,7 @@ public class TogglePull extends CommandBase {
     @Override
     public void initialize() {
         Pull.setPull();
-
+        pullToggle = true;
     }
 
     // Called every time the scheduler runs while the command is scheduled.
@@ -28,6 +30,7 @@ public class TogglePull extends CommandBase {
     @Override
     public void end(boolean interrupted) {
         Pull.stop();
+        pullToggle = false;
     }
 
     // Returns true when the command should end.

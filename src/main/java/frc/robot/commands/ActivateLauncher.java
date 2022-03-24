@@ -7,6 +7,7 @@ public class ActivateLauncher extends CommandBase {
 
     
     private final Launcher m_launcher;
+    boolean launcherToggle;
 
     public ActivateLauncher(Launcher launcher) {
 
@@ -21,6 +22,7 @@ public class ActivateLauncher extends CommandBase {
     public void initialize() {
         Launcher.setLauncher();
         System.out.println("Launcher started");
+        launcherToggle = true;
     }
 
     // Called every time the scheduler runs while the command is scheduled.
@@ -33,6 +35,7 @@ public class ActivateLauncher extends CommandBase {
     @Override
     public void end(boolean interrupted) {
         Launcher.stop();
+        launcherToggle = false;
     }
 
     // Returns true when the command should end.

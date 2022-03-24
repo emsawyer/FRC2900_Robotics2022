@@ -6,6 +6,7 @@ import frc.robot.subsystems.Launcher;
 public class Launcher3 extends CommandBase {
 
     private final Launcher m_launcher;
+    boolean launcherToggle;
 
     public Launcher3(Launcher launcher) {
 
@@ -17,18 +18,21 @@ public class Launcher3 extends CommandBase {
     // Called when the command is initially scheduled.
     @Override
     public void initialize() {
+        Launcher.setLauncher3();
+        launcherToggle = true;
     }
 
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        Launcher.setLauncher3();
+        
     }
 
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
         Launcher.stop();
+        launcherToggle = false;
     }
 
     // Returns true when the command should end.
