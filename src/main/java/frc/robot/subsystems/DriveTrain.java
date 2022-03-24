@@ -74,12 +74,12 @@ public class DriveTrain extends SubsystemBase {
 
     public static double setLeftMotors(double lstickspeed) {
 
-        return drive_percent * lstickspeed*-1;
+        return drive_percent * lstickspeed* -1;
     }
 
     public static double setRightMotors(double rstickspeed) {
 
-        return drive_percent * rstickspeed*-1;
+        return drive_percent * rstickspeed* -1;
     }
 
     public void stop() {

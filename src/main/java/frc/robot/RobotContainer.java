@@ -47,6 +47,7 @@ public class RobotContainer {
 
 
     // SmartDashboard Buttons
+    /*
     SmartDashboard.putData("Autonomous Command", new AutonomousCommand(m_driveTrain));
     SmartDashboard.putData("Toggle Intake", new ToggleIntake());
     
@@ -56,7 +57,7 @@ public class RobotContainer {
     SmartDashboard.putData("Activate Launcher", new ActivateLauncher(m_launcher));
     SmartDashboard.putData("Launcher2", new ToggleLauncher2(m_launcher));
     SmartDashboard.putData("Launcher3", new ToggleLauncher3(m_launcher));
-
+    */
     // Configure the button bindings
     configureButtonBindings();
 
@@ -90,17 +91,17 @@ public class RobotContainer {
     
     final JoystickButton Launcher1 = new JoystickButton(xboxController, XboxController.Button.kX.value);        
     Launcher1.toggleWhenPressed(new ActivateLauncher(m_launcher) ,true);
-        SmartDashboard.putData("Launcher",new ActivateLauncher(m_launcher) );
+        SmartDashboard.putData("Launcher1",new ActivateLauncher(m_launcher) );
         SmartDashboard.putBoolean("Launcher1 Status", ActivateLauncher.launcherToggle);
 
     final JoystickButton Launcher2 = new JoystickButton(xboxController, XboxController.Button.kY.value);        
     Launcher2.toggleWhenPressed(new ToggleLauncher2(m_launcher) ,true);
-        SmartDashboard.putData("Launcher",new ToggleLauncher2(m_launcher) );
+        SmartDashboard.putData("Launcher2",new ToggleLauncher2(m_launcher) );
         SmartDashboard.putBoolean("Launcher2 Status", ToggleLauncher2.launcherToggle);
 
     final JoystickButton Launcher3 = new JoystickButton(xboxController, XboxController.Button.kB.value);        
     Launcher3.toggleWhenPressed(new ToggleLauncher3(m_launcher) ,true);
-        SmartDashboard.putData("Launcher",new ToggleLauncher3(m_launcher) ); 
+        SmartDashboard.putData("Launcher3",new ToggleLauncher3(m_launcher) ); 
         SmartDashboard.putBoolean("Launcher3 Status", ToggleLauncher3.launcherToggle);        
     
 
