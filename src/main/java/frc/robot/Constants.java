@@ -24,9 +24,9 @@ public class Constants {
     public static final double DRIVE_MOTOR_PERCENTAGE = .75;
     public static final double INTAKE_MOTOR_PERCENTAGE = -.50;
 
-    public static final double PULL_MOTOR_PERCENTAGE = -.50;
+    public static final double PULL_MOTOR_PERCENTAGE = -1.0;
 
-    public static final double LAUNCHER_MOTOR_PERCENTAGE = .75;
+    public static final double LAUNCHER_MOTOR_PERCENTAGE = 1.0;
     public static final double LAUNCHER_MOTOR_PERCENTAGE2 = .50;
     public static final double LAUNCHER_MOTOR_PERCENTAGE3 = 0;
     

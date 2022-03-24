@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.motorcontrol.Spark;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 public class DriveTrain extends SubsystemBase {
@@ -50,6 +51,9 @@ public class DriveTrain extends SubsystemBase {
         differentialDrive.setSafetyEnabled(true);
         differentialDrive.setExpiration(0.1);
         differentialDrive.setMaxOutput(1.0);
+
+        SmartDashboard.putNumber("Left Motor Speed", leftMotor.get());
+        SmartDashboard.putNumber("Right Motor Speed", rightMotor.get());        
 
     }
 

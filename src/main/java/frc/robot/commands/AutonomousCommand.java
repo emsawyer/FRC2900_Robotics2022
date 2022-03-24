@@ -1,4 +1,5 @@
 package frc.robot.commands;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.subsystems.DriveTrain;
@@ -32,7 +33,8 @@ public class AutonomousCommand extends CommandBase {
     public void initialize() {
         
         DriveTrain.m_timer.reset();
-        DriveTrain.m_timer.start();    
+        DriveTrain.m_timer.start();
+        SmartDashboard.putNumber("Autonomous Timer", DriveTrain.m_timer.get());    
 
     }
 
